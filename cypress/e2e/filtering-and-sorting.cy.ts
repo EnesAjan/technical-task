@@ -47,18 +47,15 @@ describe('Filters and Sorting Tests', () => {
     });
 
     it('should filter products by brand without sorting', () => {
-        const brand = 'Apple'; // Replace with an actual brand from your API
+        const brand = 'Apple';
 
-        // Select a brand from the filter
-        cy.get('#brand-filter').select(brand); // Replace with the correct selector for the brand dropdown
+        cy.get('#brand-filter').select(brand);
 
-        // Verify the URL is updated with the selected brand
         cy.url().should('include', `brand=${encodeURIComponent(brand)}`);
 
-        // Verify the product list only shows products from the selected brand
         cy.get('[data-cy="product-card"]').each(($card) => {
             cy.wrap($card)
-                .find('[data-cy="product-brand"]') // Replace with your selector for the product brand
+                .find('[data-cy="product-brand"]')
                 .should('contain.text', brand);
         });
     });
