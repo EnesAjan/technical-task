@@ -1,3 +1,4 @@
+
 describe('Favorite Products Functionality', () => {
     it('should add a product to favorites and verify it on the favorites page', () => {
         cy.visit('/product-list');
