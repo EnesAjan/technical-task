@@ -36,6 +36,7 @@ export default async function ProductList({searchParams}: { searchParams: Promis
 
 
     const productsData = await (category ? getProductsByCategory(skip, category, sort) : getProducts(skip, search, brand, sort));
+
     return (
         <main className={'w-full max-w-[1540px]'}>
             <h1 id="product-list-title" className="text-2xl font-bold mb-4">Product List</h1>
@@ -50,7 +51,7 @@ export default async function ProductList({searchParams}: { searchParams: Promis
                 </div>
             </section>
             <ListView productsData={productsData as ProductsResponse}/>
-            {(productsData?.products && productsData?.products?.length >= 18) &&
+            {(productsData?.products && productsData?.total >= 18 && !brand) &&
                 <Pagination totalPages={Math.ceil(productsData?.total / limit)}
                             currentPage={currentPage}
                 />}

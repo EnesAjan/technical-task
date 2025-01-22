@@ -19,6 +19,7 @@ export const FavoriteStar: React.FC<FavoriteStarProps> = ({product}) => {
     };
 
     return <div
+        data-cy="favorite-button"
         onClick={toggleFavorite}
         className="absolute top-2 right-2 cursor-pointer text-3xl text-gray-400 hover:text-red-500 transition-colors"
     >

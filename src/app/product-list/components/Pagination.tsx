@@ -55,6 +55,7 @@ export const Pagination: React.FC<PaginationProps> = ({
         <nav aria-label="Product Pagination" className="flex w-full justify-center items-center space-x-2">
             <button
                 aria-label={"Previous button"}
+                data-cy="pagination-prev"
                 disabled={currentPage === 1}
                 onClick={() => onPageChange(currentPage - 1)}
                 className={`px-3 py-1 border rounded ${
@@ -69,7 +70,7 @@ export const Pagination: React.FC<PaginationProps> = ({
             {paginationRange.map((page, index) =>
                     typeof page === "number" ? (
                         <button
-                            aria-label={"Page button"}
+                            aria-label={`Page button-${page}`}
                             key={index}
                             onClick={() => onPageChange(page as number)}
                             className={`px-3 py-1 border rounded ${
@@ -89,6 +90,7 @@ export const Pagination: React.FC<PaginationProps> = ({
 
             <button
                 aria-label={'Next button'}
+                data-cy="pagination-next"
                 disabled={currentPage === totalPages}
                 onClick={() => onPageChange(currentPage + 1)}
                 className={`px-3 py-1 border rounded ${
