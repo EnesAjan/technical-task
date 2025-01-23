@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Project Name: Technical Task - Product Listing Web Application
 
-## Getting Started
+## Description
 
-First, run the development server:
+This project is a web application built using **Next.js** that fetches and displays data dynamically from an external
+API. The application includes features like product listing, search, filtering, sorting, and the ability to favorite
+items. It is designed with **SEO optimization** and provides a responsive, user-friendly interface. The UI is styled
+using **Tailwind CSS**.
+
+## Features
+
+### Core Features
+
+1. **Product Listing**:
+
+    - Fetches product data from an external API.
+    - Displays data in a grid layout with key details like image, title, price, and description.
+
+2. **Search Functionality**:
+
+    - Users can search for products by title or description.
+    - Dynamically updates the URL and results based on the search query.
+
+3. **Filtering** (The API is external, so it is possible that some requirements are missing.):
+
+    - Allows filtering products by category and brand.
+    - Updates the product list and URL parameters.
+
+4. **Sorting** (The API is external, so it is possible that some requirements are missing.):
+
+    - Provides sorting options (e.g., Title Ascending, Title Descending).
+    - Dynamically updates the product list based on the selected sorting method.
+
+5. **Favorites**:
+
+    - Users can mark products as favorites.
+    - Favorites persist in local storage and are displayed on a separate favorites page.
+
+6. **Pagination**:
+
+    - Supports pagination for large datasets.
+    - Dynamically updates results based on the current page.
+
+### Additional Features
+
+- **SEO Optimization**:
+
+    - Implements meta tags, and semantic HTML.
+    - Ensures pages are search-engine friendly.
+
+- **Responsive Design**:
+
+    - Optimized for mobile, tablet, and desktop views.
+
+- **Skeleton Loading**:
+
+    - Displays skeleton loaders while data is being fetched.
+
+## Tech Stack
+
+- **Framework**: Next.js (React framework)
+- **Styling**: Tailwind CSS
+- **State Management**: React Context API
+- **API Integration**: Fetch API
+- **SEO Optimization**: Head component for meta tags
+- **Testing**: Cypress (End-to-End Testing)
+
+## Installation
+
+
+1. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+2. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+3. Open your browser and visit:
+
+   ```
+   http://localhost:3000
+   ```
+
+## Scripts
+
+- `npm run dev`: Starts the development server.
+- `npm run build`: Builds the application for production.
+- `npm start`: Runs the production build.
+- `npm run test`: Runs Cypress tests.
+
+
+
+## Deployment
+
+This project is deployed on **Vercel**.
+
+Deployed app on:  **https://technical-task-sand.vercel.app/product-list**
+
+
+
+## Testing
+
+This project uses **Cypress** for end-to-end testing.
+To run tests:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx cypress open
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

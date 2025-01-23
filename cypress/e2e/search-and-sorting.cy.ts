@@ -37,7 +37,7 @@ describe('Search and Sort Functionality', () => {
                     parseFloat(price.textContent?.replace('$', '') || '0')
                 );
 
-                const sortedPrices = [...prices].sort((a, b) => a - b); // Adjust sort logic for the option
+                const sortedPrices = [...prices].sort((a, b) => a - b);
                 expect(prices).to.deep.equal(sortedPrices);
             });
     });

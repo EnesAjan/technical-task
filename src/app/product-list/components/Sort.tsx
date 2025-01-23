@@ -36,7 +36,7 @@ export const SortOptions = () => {
         data-cy="sort-options"
         value={sortOrder}
         onChange={handleSortChange}
-        className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="px-4 w-full md:w-1/3 h-14 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
     >
         <option className={'cursor-pointer'} value="">Sort by</option>
         {sortOptions.map(option => <option key={option.id} className={'cursor-pointer'}
